@@ -1,12 +1,21 @@
-// JavaScript code for your website
+// Interactive JavaScript for My Work section
 
-// Function to handle button click
-function handleButtonClick() {
-    alert("Button clicked!"); // Display an alert
-}
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all "View Details" buttons
+    const viewButtons = document.querySelectorAll('.work-item button');
 
-// Add event listener to the button
-document.addEventListener("DOMContentLoaded", function() {
-    var button = document.getElementById("myButton"); // Assuming your button has an id of "myButton"
-    button.addEventListener("click", handleButtonClick);
+    // Add click event listener to each button
+    viewButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Toggle the class 'show-details' on the parent div of the button
+            this.parentNode.classList.toggle('show-details');
+            
+            // Change button text based on the class
+            if (this.parentNode.classList.contains('show-details')) {
+                this.textContent = 'Hide Details';
+            } else {
+                this.textContent = 'View Details';
+            }
+        });
+    });
 });

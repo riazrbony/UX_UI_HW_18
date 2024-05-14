@@ -122,3 +122,51 @@ h3:hover {
 .nav-item a:hover {
     color: #ffcc00;
 }
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    font-size: 10px
+}
+
+/* Mobile Media Query */
+@media screen and (max-width: 600px) {
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .flexContainer div {
+        width: 100%;
+    }
+
+    .workGrid {
+        grid-template-columns: 1fr;
+    }
+}
+.profile-section {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 30px 0;
+}
+
+.profile-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2px;
+}
+
+.bio {
+    font-size: 12px;
+    line-height: 1.6;
+}
